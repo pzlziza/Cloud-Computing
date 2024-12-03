@@ -4,7 +4,7 @@ const {
   getSignLanguages,
   updateSignLanguages,
   deleteSignLnguages,
-} = require("./handler/signLanguages");
+} = require("../handler/signLanguages");
 
 const signLanguagesRoutes = [
   {
