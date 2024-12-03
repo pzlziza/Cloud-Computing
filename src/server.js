@@ -1,6 +1,6 @@
 const Hapi = require("@hapi/hapi");
 const { signLanguagesRoutes } = require("./routes/signLanguages");
-const { mockupRoutes } = require("./routes/mockupRoutes");
+const { wordRoutes } = require("./routes/wordRoutes");
 const { gestureRoutes } = require("./routes/gestureRoutes");
 const { alphabetRoutes } = require("./routes/alphabetRoutes");
 
@@ -12,7 +12,7 @@ const init = async () => {
 
   //Register Routes
   server.route(signLanguagesRoutes);
-  server.route(mockupRoutes);
+  server.route(wordRoutes);
   server.route(gestureRoutes);
   server.route(alphabetRoutes);
 

@@ -1,0 +1,9 @@
+application:
+  language: nodejs
+  version: "15"
+  cluster: shared
+
+build:
+  command: npm install
+run:
+  command: node src/server.js

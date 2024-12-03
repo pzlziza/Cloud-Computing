@@ -4,7 +4,7 @@ const {
   getGestureById,
   updateGesture,
   deleteGesture,
-} = require("./handler/gestureHandler");
+} = require("../handler/gestureHandler.js");
 
 const gestureRoutes = [
   {

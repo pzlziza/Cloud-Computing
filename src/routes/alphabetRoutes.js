@@ -2,7 +2,7 @@ const {
   createAlphabet,
   getAllAlphabet,
   getAlphabetById,
-} = require("./handler/alphabetHandler");
+} = require("../handler/alphabetHandler");
 
 const alphabetRoutes = [
   {

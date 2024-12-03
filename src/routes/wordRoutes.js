@@ -2,9 +2,9 @@ const {
   createWord,
   getAllWords,
   getWordById,
-} = require("./handler/wordHandler");
+} = require("../handler/wordHandler");
 
-const gestureRoutes = [
+const wordRoutes = [
   {
     method: "POST",
     path: "/word",
@@ -20,11 +20,6 @@ const gestureRoutes = [
     path: "/word/{id}",
     handler: getWordById,
   },
-  {
-    method: "PUT",
-    path: "/word/{id}",
-    handler: updateWord,
-  },
 ];
 
-module.exports = { gestureRoutes };
+module.exports = { wordRoutes };

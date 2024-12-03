@@ -1,0 +1,84 @@
+{
+    "info": {
+      "name": "Gestures CRUD",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Create Gesture",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"gesture_name\": \"Wave\",\n  \"video_url\": \"https://example.com/wave.mp4\",\n  \"video_description\": \"A waving gesture to say hello.\",\n  \"detected_gesture\": \"Wave detected\",\n  \"text_translation\": \"Hello\",\n  \"media_input_type\": \"video\",\n  \"created_by\": 1\n}"
+          },
+          "url": {
+            "raw": "{{base_url}}/gesture",
+            "host": ["{{base_url}}"],
+            "path": ["gesture"]
+          }
+        }
+      },
+      {
+        "name": "Get All Gestures",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "{{base_url}}/gesture",
+            "host": ["{{base_url}}"],
+            "path": ["gesture"]
+          }
+        }
+      },
+      {
+        "name": "Get Gesture by ID",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "{{base_url}}/gesture/:id",
+            "host": ["{{base_url}}"],
+            "path": ["gesture", ":id"]
+          }
+        }
+      },
+      {
+        "name": "Update Gesture",
+        "request": {
+          "method": "PUT",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"gesture_name\": \"Thumbs Up\",\n  \"video_url\": \"https://example.com/thumbsup.mp4\",\n  \"video_description\": \"Updated description.\",\n  \"detected_gesture\": \"Thumbs Up detected\",\n  \"text_translation\": \"Good Job!\",\n  \"media_input_type\": \"video\",\n  \"updated_by\": 1\n}"
+          },
+          "url": {
+            "raw": "{{base_url}}/gesture/:id",
+            "host": ["{{base_url}}"],
+            "path": ["gesture", ":id"]
+          }
+        }
+      },
+      {
+        "name": "Delete Gesture",
+        "request": {
+          "method": "DELETE",
+          "url": {
+            "raw": "{{base_url}}/gesture/:id",
+            "host": ["{{base_url}}"],
+            "path": ["gesture", ":id"]
+          }
+        }
+      }
+    ]
+  }
+  
